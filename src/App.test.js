@@ -1,9 +1,6 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+import { add } from './App'
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+test('add', () => {
+  const value = add(45678, 89651)
+  expect(value).toBe(135329)
+})
